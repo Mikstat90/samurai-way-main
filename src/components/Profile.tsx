@@ -1,13 +1,11 @@
 import React from 'react';
-import './Profile.css';
+import s from './Profile.module.css';
 
 const Profile = () => {
     return (
-        <div className='content'>
+        <div className={s.content}>
             <div>
-                <img
-                    src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
-                    alt="img"/>
+                <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg" alt="img"/>
             </div>
             <div>
                 ava + description
@@ -17,11 +15,13 @@ const Profile = () => {
                 <div>
                     New post
                 </div>
-                <div>
-                    post1
-                </div>
-                <div>
-                    post2
+                <div className={s.posts}>
+                    <div className={s.item}>
+                        post1
+                    </div>
+                    <div className={s.item}>
+                        post2
+                    </div>
                 </div>
             </div>
         </div>
